@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视界捕手 - 摄影作品分享</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- 背景效果 -->
+    <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+
+    <!-- 页面加载动画 -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>视界捕手</h1>
+                <span>摄影作品分享</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#gallery">作品集</a></li>
+                    <li><a href="#upload" class="upload-btn">上传作品</a></li>
+                    <li><a href="#categories">分类</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#contact">联系方式</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首页 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="animate-text">捕捉瞬间<br>定格永恒</h1>
+            <p class="animate-text delay-1">探索光与影的奇妙世界，感受摄影的无限魅力</p>
+            <a href="#gallery" class="btn animate-text delay-2">浏览作品</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero-fireworks.jpg" alt="绚丽烟花">
+        </div>
+    </section>
+
+    <!-- 特色作品 -->
+    <section id="featured" class="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2>特色作品</h2>
+                <p>精选最具代表性的摄影作品</p>
+            </div>
+            <div class="featured-grid">
+                <div class="featured-item large">
+                    <img src="images/fireworks1.jpg" alt="绚丽烟花">
+                    <div class="overlay">
+                        <h3>光影绽放</h3>
+                        <p>夜空中绽放的烟花，如梦如幻</p>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <img src="images/portrait1.jpg" alt="人物肖像">
+                    <div class="overlay">
+                        <h3>光影人像</h3>
+                        <p>光线勾勒出的完美轮廓</p>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <img src="images/fireworks2.jpg" alt="烟花特写">
+                    <div class="overlay">
+                        <h3>星火璀璨</h3>
+                        <p>烟花绽放的瞬间之美</p>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <img src="images/portrait2.jpg" alt="人物剪影">
+                    <div class="overlay">
+                        <h3>剪影艺术</h3>
+                        <p>光与影的完美结合</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集 -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>作品集</h2>
+                <p>探索我们的摄影作品集</p>
+            </div>
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="fireworks">烟花</button>
+                <button class="filter-btn" data-filter="portrait">人像</button>
+                <button class="filter-btn" data-filter="landscape">风景</button>
+                <button class="filter-btn" data-filter="abstract">抽象</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item fireworks">
+                    <img src="images/fireworks3.jpg" alt="烟花">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>夜空绽放</h3>
+                            <p>烟花 | 夜景</p>
+                            <a href="images/fireworks3.jpg" class="zoom"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item portrait">
+                    <img src="images/portrait3.jpg" alt="人像">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>光影人像</h3>
+                            <p>人像 | 艺术</p>
+                            <a href="images/portrait3.jpg" class="zoom"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item fireworks">
+                    <img src="images/fireworks4.jpg" alt="烟花">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>璀璨星河</h3>
+                            <p>烟花 | 夜景</p>
+                            <a href="images/fireworks4.jpg" class="zoom"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item landscape">
+                    <img src="images/landscape1.jpg" alt="风景">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>山水之间</h3>
+                            <p>风景 | 自然</p>
+                            <a href="images/landscape1.jpg" class="zoom"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item portrait">
+                    <img src="images/portrait4.jpg" alt="人像">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>瞬间定格</h3>
+                            <p>人像 | 生活</p>
+                            <a href="images/portrait4.jpg" class="zoom"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item abstract">
+                    <img src="images/abstract1.jpg" alt="抽象">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>色彩交织</h3>
+                            <p>抽象 | 艺术</p>
+                            <a href="images/abstract1.jpg" class="zoom"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item fireworks">
+                    <img src="images/fireworks5.jpg" alt="烟花">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>光影交错</h3>
+                            <p>烟花 | 夜景</p>
+                            <a href="images/fireworks5.jpg" class="zoom"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item landscape">
+                    <img src="images/landscape2.jpg" alt="风景">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>自然之美</h3>
+                            <p>风景 | 自然</p>
+                            <a href="images/landscape2.jpg" class="zoom"><i class="fas fa-search-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-load-more">
+                <button class="btn">加载更多</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分类展示 -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>摄影分类</h2>
+                <p>探索不同类型的摄影艺术</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/category-fireworks.jpg" alt="烟花摄影">
+                    </div>
+                    <div class="category-content">
+                        <h3>烟花摄影</h3>
+                        <p>捕捉夜空中绚丽多彩的烟花，记录光与色彩的瞬间绽放。</p>
+                        <a href="#gallery" class="btn-small category-link" data-filter="fireworks">查看更多</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/category-portrait.jpg" alt="人像摄影">
+                    </div>
+                    <div class="category-content">
+                        <h3>人像摄影</h3>
+                        <p>通过镜头捕捉人物的神态、情感和故事，展现人物的独特魅力。</p>
+                        <a href="#gallery" class="btn-small category-link" data-filter="portrait">查看更多</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/category-landscape.jpg" alt="风景摄影">
+                    </div>
+                    <div class="category-content">
+                        <h3>风景摄影</h3>
+                        <p>记录大自然的壮丽景色，展现山川河流、日出日落的自然之美。</p>
+                        <a href="#gallery" class="btn-small category-link" data-filter="landscape">查看更多</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/category-abstract.jpg" alt="抽象摄影">
+                    </div>
+                    <div class="category-content">
+                        <h3>抽象摄影</h3>
+                        <p>通过独特的视角和构图，创造出充满艺术感的抽象影像作品。</p>
+                        <a href="#gallery" class="btn-small category-link" data-filter="abstract">查看更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/about-image.jpg" alt="关于我们">
+                </div>
+                <div class="about-text">
+                    <div class="section-header text-left">
+                        <h2>关于我们</h2>
+                        <p>热爱摄影，热爱生活</p>
+                    </div>
+                    <p>我们是一群热爱摄影的艺术家，致力于通过镜头捕捉世界的美丽瞬间。从绚丽的烟花到动人的人像，从壮观的风景到抽象的艺术，我们用独特的视角记录生活中的点滴感动。</p>
+                    <p>成立于2025，我们的团队由来自不同背景的摄影师组成，每个人都带来了独特的风格和创意。我们相信，摄影不仅仅是记录，更是一种表达和创造。</p>
+                    <p>通过这个平台，我们希望能与更多摄影爱好者分享我们的作品和经验，共同探索摄影的无限可能。</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">1+</span>
+                            <span class="stat-text">摄影作品</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">0+</span>
+                            <span class="stat-text">获奖经历</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">7</span>
+                            <span class="stat-text">专业摄影师</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>联系我们</h2>
+                <p>有任何问题或合作意向，请随时联系我们</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-
+                        ‘海南省陵水黎族自治县国际教育创新试验区</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>邮箱</h3>
+                            <p>3785439724@qq.com</p>
+                        </div>  
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>电话</h3>
+                            <p>+86 18823197005</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="您的邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="主题">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="您的留言" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">发送留言</button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>视界捕手</h2>
+                    <p>捕捉瞬间，定格永恒</p>
+                </div>
+                <div class="footer-links">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#gallery">作品集</a></li>
+                        <li><a href="#categories">分类</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#contact">联系方式</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>订阅我们</h3>
+                    <p>订阅我们的电子邮件，获取最新摄影作品和活动信息</p>
+                    <form>
+                        <input type="email" placeholder="您的邮箱地址" required>
+                        <button type="submit">订阅</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 视界捕手摄影. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 图片查看器 -->
+    <div class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption"></div>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- 上传作品模态框 -->
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>上传作品</h2>
+            <form id="uploadForm">
+                <div class="form-group">
+                    <input type="text" id="title" placeholder="作品标题" required>
+                </div>
+                <div class="form-group">
+                    <select id="category" required>
+                        <option value="">选择分类</option>
+                        <option value="fireworks">烟花</option>
+                        <option value="portrait">人像</option>
+                        <option value="landscape">风景</option>
+                        <option value="abstract">抽象</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="description" placeholder="作品描述" required></textarea>
+                </div>
+                <div class="form-group">
+                    <div class="upload-area" id="uploadArea">
+                        <input type="file" id="imageInput" accept="image/*" required>
+                        <label for="imageInput">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span>点击或拖拽图片到此处上传</span>
+                        </label>
+                        <div id="imagePreview"></div>
+                    </div>
+                </div>
+                <button type="submit" class="btn">上传作品</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="upload.js"></script>
+</body>
+</html> 
